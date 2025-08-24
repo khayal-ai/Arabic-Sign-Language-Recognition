@@ -20,4 +20,4 @@ The goal is to support communication and provide tools that can help the communi
 - Increase dataset size for better accuracy.
 - Deploy as a web or mobile application.
 
-If you have questions or suggestions, feel free to reach out.
+**If you have questions or suggestions, feel free to reach out.**
