@@ -7,7 +7,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
 from tensorflow.keras.utils import to_categorical
 
-# ===== Load Dataset =====
+
 data_dir = "dataset/"
 categories = ["Aleff", "Baa", "Taa", "Thaa", "Jeem", "Haa", "Khaa"]
 img_size = 64
@@ -24,7 +24,7 @@ for category in categories:
         except Exception as e:
             pass
 
-# ===== Prepare Features and Labels =====
+# Features X and Labels Y
 X = []
 y = []
 for features, label in data:
@@ -34,10 +34,10 @@ for features, label in data:
 X = np.array(X).reshape(-1, img_size, img_size, 1) / 255.0
 y = to_categorical(y, len(categories))
 
-# ===== Split Dataset =====
+# Split dataset
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# ===== Build CNN Model =====
+# Build CNN Model 
 model = Sequential([
     Conv2D(32, (3,3), activation='relu', input_shape=(img_size, img_size, 1)),
     MaxPooling2D((2,2)),
@@ -50,19 +50,16 @@ model = Sequential([
 ])
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
-# ===== Train Model =====
+# Train Model 
 history = model.fit(X_train, y_train, epochs=15, validation_data=(X_test, y_test))
 
-# ===== Evaluate =====
+# Evaluate 
 loss, acc = model.evaluate(X_test, y_test)
 print(f"ACCURACY: {acc*100:.2f}%")
 
-# ===== Save Model =====
 model.save("sign_model.h5")
 
-# ===== Plot Accuracy and Loss =====
 plt.figure(figsize=(12,5))
-
 # Accuracy Plot
 plt.subplot(1,2,1)
 plt.plot(history.history['accuracy'], label='Train Accuracy')
