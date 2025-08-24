@@ -13,11 +13,35 @@ The goal is to support communication and provide tools that can help the communi
  ## 📊 Dataset
 - Images were collected manually for Arabic sign language letters.
 - Each letter has 300+ images.
-- The dataset is stored locally and not uploaded here due to size limitations.
 
 ## 🔮 Future Improvements 
 - Add more letters until full Arabic alphabet is covered.
 - Increase dataset size for better accuracy.
 - Deploy as a web or mobile application.
+
+## 📊 Training Results
+
+Epochs: 15
+Batch size: (default by Keras)
+Image size: 64x64 (grayscale)
+
+## 🔹 Accuracy Progression:
+
+**Epoch 1:** 34% training accuracy – 63% validation accuracy
+**Epoch 3:** 80% training accuracy – 92% validation accuracy
+**Epoch 5:** 90% training accuracy – 96% validation accuracy
+**Epoch 7:** 94% training accuracy – 98% validation accuracy
+**Epoch 15:** 97% training accuracy – 98% validation accuracy 
+
+## 🔹 Loss Progression:
+
+Started with high loss (1.69)
+Dropped significantly to around 0.08 by the last epoch
+
+## 🔹 Final Results:
+
+**Test Accuracy:** 98% 
+**Validation Loss:** stabilized around 0.11
+The model generalizes well, with minimal overfitting.
 
 **If you have questions or suggestions, feel free to reach out.**
