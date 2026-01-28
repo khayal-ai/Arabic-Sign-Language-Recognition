@@ -25,7 +25,7 @@ The goal is to support communication and provide tools that can help the communi
 - Batch size: (default by Keras)
 - Image size: 64x64 (grayscale)
 
-## 🔹 Accuracy Progression:
+## Accuracy Progression:
 
 - **Epoch 1:** 34% training accuracy – 63% validation accuracy
 - **Epoch 3:** 80% training accuracy – 92% validation accuracy
@@ -33,12 +33,12 @@ The goal is to support communication and provide tools that can help the communi
 - **Epoch 7:** 94% training accuracy – 98% validation accuracy
 - **Epoch 15:** 97% training accuracy – 98% validation accuracy 
 
-## 🔹 Loss Progression:
+##  Loss Progression:
 
 - Started with high loss (1.69)
 - Dropped significantly to around 0.08 by the last epoch
 
-## 🔹 Final Results:
+##  Final Results:
 
 - **Test Accuracy:** 98% 
 - **Validation Loss:** stabilized around 0.11
